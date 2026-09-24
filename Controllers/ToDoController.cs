@@ -20,7 +20,7 @@ public class ToDoController : ControllerBase
     {
         try
         {
-            var result = _toDoService.Create(dto);
+            var result = _toDoService.Create(dto,1);
             return Ok(result);
         }
         catch (Exception ex)
@@ -34,7 +34,7 @@ public class ToDoController : ControllerBase
     {
         try
         {
-            var result = _toDoService.GetById(index);
+            var result = _toDoService.GetById(index,1);
             
             if (result == null)
             {
